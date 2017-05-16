@@ -38,7 +38,7 @@ print(r[:4:2, :-1]) #every second row up to 4th (0, 2), all columns except for t
 print(r[-1, ::2]) #every second element from the last row
 
 r[r>30] = 30 #assign 30 to all elements >30 in r
-
+itemindex = np.where(r>30) #returns indexes of elements >30
 r2 = r[:3,:3]
 r2[:] = 0 #this assignment also changes elements in array r!
 r_copy = r.copy() #makes copy of the array; changes in copy -> no changes in original one
