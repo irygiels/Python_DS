@@ -4,10 +4,6 @@ from struct import *
 def minute_passed(oldepoch):
     return time.time() - oldepoch >= 60
 
-def eth_addr (a) :
-  b = "%.2x:%.2x:%.2x:%.2x:%.2x:%.2x" % (ord(a[0]) , ord(a[1]) , ord(a[2]), ord(a[3]), ord(a[4]) , ord(a[5]))
-  return b
- 
 try:
     s = socket.socket( socket.AF_PACKET , socket.SOCK_RAW , socket.ntohs(0x0003))
 except socket.error , msg:
