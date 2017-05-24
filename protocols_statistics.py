@@ -7,8 +7,7 @@ except socket.error , msg:
     print 'Socket could not be created. Error Code : ' + str(msg[0]) + ' Message ' + msg[1]
     sys.exit()
 
-
-counters = {"eth": 0, "ip": 0, "icmp_ip": 0, "tcp_ip": 0, "udp_ip": 0, "diff_ip": 0}
+counters = {"eth": 0, "ip": 0, "icmp_ip": 0, "tcp_ip": 0, "udp_ip": 0}
 i=0
 oldtime=time.time()
 while True:
