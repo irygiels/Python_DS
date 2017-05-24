@@ -3,12 +3,11 @@ from struct import *
 
 try:
     s = socket.socket( socket.AF_PACKET , socket.SOCK_RAW , socket.ntohs(0x0003))
-except socket.error , msg:
+except socket.error, msg :
     print 'Socket could not be created. Error Code : ' + str(msg[0]) + ' Message ' + msg[1]
     sys.exit()
 
 counters = {"eth": 0, "ip": 0, "icmp_ip": 0, "tcp_ip": 0, "udp_ip": 0}
-i=0
 oldtime=time.time()
 while True:
     packet = s.recvfrom(65565)
