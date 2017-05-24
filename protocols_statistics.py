@@ -18,7 +18,6 @@ while True:
     eth = unpack('!6s6sH' , eth_header)
     eth_protocol = socket.ntohs(eth[2])
     #IP = 8
-    i+=1
     if eth_protocol == 8 :
 	counters['ip']+=1
         ip_header = packet[eth_length:20+eth_length]
