@@ -1,9 +1,6 @@
 import socket, sys, time
 from struct import *
 
-def minute_passed(oldepoch):
-    return time.time() - oldepoch >= 60
-
 try:
     s = socket.socket( socket.AF_PACKET , socket.SOCK_RAW , socket.ntohs(0x0003))
 except socket.error , msg:
